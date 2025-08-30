@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>E.D.I.T.H Voice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="skin">
+  <main class="frame">
+    <header class="topbar">
+      <div class="brand">E.D.I.T.H</div>
+      <div class="spacer"></div>
+      <div class="label small">Transcribed Text</div>
+    </header>
+
+    <section class="panel transcript">
+      <div id="transcript" class="panel-body mono">—</div>
+    </section>
+
+    <section class="panel response">
+      <div class="label small">Response Text</div>
+      <div class="row">
+        <div id="responseText" class="panel-body mono">—</div>
+        <button id="btnSpeak" class="icon-btn" title="Play response"></button>
+      </div>
+    </section>
+
+    <!-- <section class="controlbar">
+      <button id="btnRecord" class="btn primary">Record</button>
+      <button id="btnStop" class="btn" disabled>Stop</button>
+      <span id="status" class="status">Idle</span>
+      <div class="progress rail">
+        <div class="progress fill" id="progressFill"></div>
+        <div class="knob" id="progressKnob"></div>
+      </div>
+    </section> -->
+
+    <audio id="audioPlayer" preload="metadata"></audio>
+    <section class="textbar">
+      <button id="btnRecord" class="btn primary">Record</button>
+      <button id="btnStop" class="btn" disabled>Stop</button>
+      <span id="status" class="status">Idle</span>
+      <div class="input-rail">
+        <input id="textInput" class="prompt" type="text" placeholder="Type a message for E.D.I.T.H…" />
+        <button id="btnSend" class="send-btn" title="Send">➤</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+flask
+faster-whisper
+TTS
+google-generativeai
+python-dotenv
+imageio-ffmpeg
